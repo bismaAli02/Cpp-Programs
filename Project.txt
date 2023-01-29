@@ -1,0 +1,10 @@
+0,we,0,1024,FSC-ENGG,Physics,Islamabad
+Azfar,Mohsin,18,1074,FSC-MEDICAL,Bio,Lahore
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,
+,,0,0,,,

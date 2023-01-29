@@ -1,0 +1,63 @@
+void MoveFire()
+{
+
+    for (int row = 0; row < 25; row++)
+    {
+        for (int col = 0; col < 60; col++)
+        {
+            if (maze[row][col] == '^')
+            {
+                gotoxy(col, row);
+                cout << " ";
+                maze[row][col] = ' ';
+                if (maze[row - 1][col] != '#')
+                {
+                    if (maze[row - 1][col] == '|' || maze[row - 1][col] == '_' || maze[row - 1][col] == '<' || maze[row - 1][col] == '>')
+                    {
+                        if (Enemy1X == (row - 1) || Enemy1X == (row - 1) + 1 || Enemy1X == (row - 1) - 1)
+                        {
+
+                            gotoxy(Enemy1Y - 4, Enemy1X - 1);
+                            cout << "         ";
+                            gotoxy(Enemy1Y - 4, Enemy1X);
+                            cout << "         ";
+                            gotoxy(Enemy1Y - 4, Enemy1X + 1);
+                            cout << "         ";
+                            destroyEnemy(Enemy1X, Enemy1Y);
+                        }
+                        if (Enemy2X == (row - 1) || Enemy2X == (row - 1) + 1 || Enemy2X == (row - 1) - 1)
+                        {
+                            gotoxy(Enemy2Y - 4, Enemy2X - 1);
+                            cout << "         ";
+                            gotoxy(Enemy2Y - 4, Enemy2X);
+                            cout << "         ";
+                            gotoxy(Enemy2Y - 4, Enemy2X + 1);
+                            cout << "         ";
+                            destroyEnemy(Enemy2X, Enemy2Y);
+                        }
+                        if (Enemy3X == (row - 1) || Enemy3X == (row - 1) + 1 || Enemy3X == (row - 1) - 1)
+                        {
+                            gotoxy(Enemy3Y - 4, Enemy3X - 1);
+                            cout << "         ";
+                            gotoxy(Enemy3Y - 4, Enemy3X);
+                            cout << "         ";
+                            gotoxy(Enemy3Y - 4, Enemy3X + 1);
+                            cout << "         ";
+                            destroyEnemy(Enemy3X, Enemy3Y);
+                        }
+                        // count++;
+                        gotoxy(col, row - 1);
+                        cout << " ";
+                        maze[row - 1][col] = ' ';
+                    }
+                    else
+                    {
+                        gotoxy(col, row - 1);
+                        cout << "^";
+                        maze[row - 1][col] = '^';
+                    }
+                }
+            }
+        }
+    }
+}

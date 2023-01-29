@@ -1,0 +1,2 @@
+Usman	E001	Lecturer	January	70000	5	3	2000
+				70000	5	3	2000
